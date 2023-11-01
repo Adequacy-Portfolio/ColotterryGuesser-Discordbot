@@ -1,0 +1,29 @@
+{
+  "name": "colotterryguesser-discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "prestart": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adequacy-Portfolio/ColotterryGuesser-Discordbot.git"
+  },
+  "author": "Adequacy <adequacy.business@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adequacy-Portfolio/ColotterryGuesser-Discordbot/issues"
+  },
+  "homepage": "https://github.com/Adequacy-Portfolio/ColotterryGuesser-Discordbot#readme",
+  "dependencies": {
+    "@discordx/importer": "^1.2.3",
+    "discord.js": "^14.13.0",
+    "discordx": "^11.7.6",
+    "dotenv": "^16.3.1",
+    "reflect-metadata": "^0.1.13"
+  }
+}
