@@ -11,9 +11,9 @@ export default class App {
             intents: [
                 IntentsBitField.Flags.Guilds,
                 IntentsBitField.Flags.GuildMessages,
-                IntentsBitField.Flags.GuildMembers
+                IntentsBitField.Flags.GuildMembers,
             ],
-            silent: false
+            silent: false,
         });
     }
     async run() {
@@ -24,7 +24,8 @@ export default class App {
         this._client.on("interactionCreate", (interaction) => {
             this._client.executeInteraction(interaction);
         });
-        await importx(dirname(import.meta.url) + "/../components/{events,commands}/**/*.{ts,js}");
+        await importx(dirname(import.meta.url) +
+            "/../components/{events,commands}/**/*.{ts,js}");
         await this._client.login(this._id);
     }
 }
