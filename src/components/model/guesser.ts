@@ -1,14 +1,17 @@
 import { GuesserModelN } from "../../types/model.js";
 
+import { getOutcomes } from '../../adapters/outcomes.js'
+import DrawsHistoryStorageHandler from "../../storage/draws.js";
+
 export default class GuesserModel {
   private _input: GuesserModelN.LotteryOutcomeHistoryT;
-  private _prediction: GuesserModelN.LotteryPredictionT | null;
+  private _prediction: null;
   constructor(input: GuesserModelN.LotteryOutcomeHistoryT) {
     this._input = input;
     this._prediction = null;
   }
 
-  private computeOccurenceByPosition() {
+  public computeOccurenceByPosition() {
     const outcomes: Record<1 | 2 | 3, Record<number | string, number>> = {
       1: {},
       2: {},
@@ -42,7 +45,7 @@ export default class GuesserModel {
     return outcomes;
   }
 
-  private computeOccurenceBySequence() {
+  public computeOccurenceBySequence() {
     const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     const outcomes: Record<string, string> = {};
     for (const first of digits) {
@@ -71,8 +74,8 @@ export default class GuesserModel {
     return outcomes;
   }
 
-  private computeOccurenceByPattern() {
-    const totalGames = history.length;
+  public computeOccurenceByPattern() {
+    const totalGames = this._input.length;
     const outcomes: Record<string, number> = {};
     for (const pattern of this._input) {
       let matchingGames = 0;
@@ -93,3 +96,10 @@ export default class GuesserModel {
     return outcomes;
   }
 }
+
+
+const a = new GuesserModel(getOutcomes(DrawsHistoryStorageHandler.getAllDraws()))
+
+console.log(a.computeOccurenceByPosition())
+console.log(a.computeOccurenceByPattern())
+console.log(a.computeOccurenceBySequence())

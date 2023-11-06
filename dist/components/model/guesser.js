@@ -1,3 +1,5 @@
+import { getOutcomes } from '../../adapters/outcomes.js';
+import DrawsHistoryStorageHandler from "../../storage/draws.js";
 export default class GuesserModel {
     _input;
     _prediction;
@@ -59,7 +61,7 @@ export default class GuesserModel {
         return outcomes;
     }
     computeOccurenceByPattern() {
-        const totalGames = history.length;
+        const totalGames = this._input.length;
         const outcomes = {};
         for (const pattern of this._input) {
             let matchingGames = 0;
@@ -76,3 +78,7 @@ export default class GuesserModel {
         return outcomes;
     }
 }
+const a = new GuesserModel(getOutcomes(DrawsHistoryStorageHandler.getAllDraws()));
+console.log(a.computeOccurenceByPosition());
+console.log(a.computeOccurenceByPattern());
+console.log(a.computeOccurenceBySequence());
