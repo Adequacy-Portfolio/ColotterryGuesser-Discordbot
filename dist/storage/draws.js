@@ -1,6 +1,16 @@
-import * as fs from 'fs';
+import * as fs from "fs";
+import ColotteryApiWrapper from "../api/colottery.js";
 export default class DrawsHistoryStorageHandler {
-    static storage_path = './storage/draws.json';
+    static storage_path = "./storage/draws.json";
+    static async actualize() {
+        const history = DrawsHistoryStorageHandler.getAllDraws();
+        const draws = await ColotteryApiWrapper.getAllPastDraws();
+        const compound = [...history, ...draws].map((draw) => JSON.stringify(draw));
+        const actualizedHistory = compound.filter((el, pos) => {
+            return compound.indexOf(el) === pos;
+        });
+        return actualizedHistory.map((draw) => JSON.parse(draw));
+    }
     static saveDraws(data) {
         if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
             const content = JSON.parse(fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString());
