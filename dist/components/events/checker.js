@@ -20,7 +20,10 @@ let Checker = class Checker {
                 DrawsHistoryStorageHandler.saveDraws([mostRecentDraw]);
             }
         }
-        const dailyBiCheck = ["0 8 * * *"].map((time) => {
+        const dailyBiCheck = [
+            process.env.FIRST_CHECK,
+            process.env.SECOND_CHECK,
+        ].map((time) => {
             return new CronJob(time, async () => {
                 await checkForNewDraw();
             });

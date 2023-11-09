@@ -10,6 +10,15 @@ export default class GuesserModelEmebds {
       .setTitle("Guesser Model Analysis Results")
       .addFields(
         {
+          name: "Nominated Choices (Top 3)",
+          value: `1. ${data.nominatedChoices[0].join(
+            "",
+          )}\n2. ${data.nominatedChoices[1].join(
+            "",
+          )}\n3. ${data.nominatedChoices[2].join("")}`,
+          inline: false,
+        },
+        {
           name: "Positional Statistics (Top 3)",
           value: "```\n" + data.byPositionReport + "```",
           inline: false,

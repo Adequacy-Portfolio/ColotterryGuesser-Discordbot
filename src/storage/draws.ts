@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import { ColotteryN } from "../types/api.js";
 import ColotteryApiWrapper from "../api/colottery.js";
+import { mergeAndRemoveDuplicates } from "../reducers/combine.js";
 
 export default class DrawsHistoryStorageHandler {
   private static readonly storage_path = "./storage/draws.json";
@@ -9,13 +10,40 @@ export default class DrawsHistoryStorageHandler {
     const history = DrawsHistoryStorageHandler.getAllDraws();
     const draws = await ColotteryApiWrapper.getAllPastDraws();
 
-    const compound = [...history, ...draws].map((draw) => JSON.stringify(draw));
+    DrawsHistoryStorageHandler.clear();
+    DrawsHistoryStorageHandler.saveDraws(
+      mergeAndRemoveDuplicates(history, draws),
+    );
+    DrawsHistoryStorageHandler.sort();
+  }
 
-    const actualizedHistory = compound.filter((el, pos) => {
-      return compound.indexOf(el) === pos;
-    });
+  public static sort() {
+    if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
+      const content = JSON.parse(
+        fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString(),
+      ) as Array<ColotteryN.DrawOutcomeT>;
 
-    return actualizedHistory.map((draw) => JSON.parse(draw));
+      const ordered_by_time = content.sort((first, second) => {
+        if (first.drawSerial <= second.drawSerial) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      fs.writeFileSync(
+        DrawsHistoryStorageHandler.storage_path,
+        JSON.stringify([...ordered_by_time]),
+      );
+    }
+  }
+
+  public static clear() {
+    if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
+      fs.writeFileSync(
+        DrawsHistoryStorageHandler.storage_path,
+        JSON.stringify([]),
+      );
+    }
   }
 
   public static saveDraws(data: Array<ColotteryN.DrawOutcomeT>) {
@@ -33,6 +61,8 @@ export default class DrawsHistoryStorageHandler {
         JSON.stringify(data),
       );
     }
+
+    DrawsHistoryStorageHandler.sort();
   }
 
   public static getAllDraws(): Array<ColotteryN.DrawOutcomeT> {
@@ -46,16 +76,6 @@ export default class DrawsHistoryStorageHandler {
     let content = JSON.parse(
       fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString(),
     ) as Array<ColotteryN.DrawOutcomeT>;
-
-    content = content.sort((first, second) => {
-      const a = new Date(first.drawTime);
-      const b = new Date(second.drawTime);
-      if (a.getTime() <= b.getTime()) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
 
     return content[0];
   }

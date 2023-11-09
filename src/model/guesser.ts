@@ -1,3 +1,4 @@
+import { MathematicalConceptsN } from "../types/generator.js";
 import { GuesserModelN } from "../types/model.js";
 
 export default class GuesserModel {
@@ -7,8 +8,8 @@ export default class GuesserModel {
     this._input = input;
   }
 
-  public computeOccurenceByPosition() {
-    const outcomes: Record<1 | 2 | 3, Record<number | string, number>> = {
+  public computeOccurenceByPosition(): GuesserModelN.PositionStatisticsT {
+    const outcomes: GuesserModelN.PositionStatisticsT = {
       1: {},
       2: {},
       3: {},
@@ -20,19 +21,23 @@ export default class GuesserModel {
     >) {
       // Count occurrences of each number at the specified position
       this._input.forEach((game) => {
-        const number = game[Number(position) - 1]; // Get number at the specified position (0, 1, or 2)
+        const number = game[
+          Number(position) - 1
+        ] as MathematicalConceptsN.digit; // Get number at the specified position (0, 1, or 2)
         if (outcomes[position][number]) {
-          outcomes[position][number]++;
+          outcomes[position][number]!++;
         } else {
           outcomes[position][number] = 1;
         }
       });
 
       // Calculate odds for each number at the specified position
-      const odds: Record<string, number> = {};
+      const odds: GuesserModelN.PositionStatisticsT[1 | 2 | 3] = {};
       Object.keys(outcomes[position]).forEach((number) => {
+        //@ts-ignore
         const count = outcomes[position][number];
         const probability = (count / totalGames) * 100; // Calculate probability in percentage
+        //@ts-ignore
         odds[number] = Number(probability.toFixed(2)); // Round to 2 decimal places
       });
 
@@ -41,9 +46,9 @@ export default class GuesserModel {
     return outcomes;
   }
 
-  public computeOccurenceBySequence() {
+  public computeOccurenceBySequence(): GuesserModelN.SequenceStatisticsT {
     const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    const outcomes: Record<string, string> = {};
+    const outcomes: GuesserModelN.SequenceStatisticsT = {};
     for (const first of digits) {
       let countFirstNumber = 0;
       let countBothNumbers = 0;
@@ -64,15 +69,17 @@ export default class GuesserModel {
         const conditionalProbability =
           (countBothNumbers / countFirstNumber) * 100;
 
-        outcomes[`${first}${second}`] = conditionalProbability.toFixed(2); // Round to 2 decimal places
+        outcomes[`${first}${second}` as keyof typeof outcomes] = Number(
+          conditionalProbability.toFixed(2),
+        ); // Round to 2 decimal places
       }
     }
     return outcomes;
   }
 
-  public computeOccurenceByPattern() {
+  public computeOccurenceByPattern(): GuesserModelN.PatternStatisticsT {
     const totalGames = this._input.length;
-    const outcomes: Record<string, number> = {};
+    const outcomes: GuesserModelN.PatternStatisticsT = {};
     for (const pattern of this._input) {
       let matchingGames = 0;
 
@@ -86,7 +93,9 @@ export default class GuesserModel {
       // Calculate the probability of the full pattern
       const probability = (matchingGames / totalGames) * 100;
 
-      outcomes[pattern.join("")] = Number(probability.toFixed(2)); // Round to 2 decimal places
+      outcomes[pattern.join("") as keyof typeof outcomes] = Number(
+        probability.toFixed(2),
+      ); // Round to 2 decimal places
     }
 
     return outcomes;

@@ -1,15 +1,33 @@
 import * as fs from "fs";
 import ColotteryApiWrapper from "../api/colottery.js";
+import { mergeAndRemoveDuplicates } from "../reducers/combine.js";
 export default class DrawsHistoryStorageHandler {
     static storage_path = "./storage/draws.json";
     static async actualize() {
         const history = DrawsHistoryStorageHandler.getAllDraws();
         const draws = await ColotteryApiWrapper.getAllPastDraws();
-        const compound = [...history, ...draws].map((draw) => JSON.stringify(draw));
-        const actualizedHistory = compound.filter((el, pos) => {
-            return compound.indexOf(el) === pos;
-        });
-        return actualizedHistory.map((draw) => JSON.parse(draw));
+        DrawsHistoryStorageHandler.clear();
+        DrawsHistoryStorageHandler.saveDraws(mergeAndRemoveDuplicates(history, draws));
+        DrawsHistoryStorageHandler.sort();
+    }
+    static sort() {
+        if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
+            const content = JSON.parse(fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString());
+            const ordered_by_time = content.sort((first, second) => {
+                if (first.drawSerial <= second.drawSerial) {
+                    return 1;
+                }
+                else {
+                    return -1;
+                }
+            });
+            fs.writeFileSync(DrawsHistoryStorageHandler.storage_path, JSON.stringify([...ordered_by_time]));
+        }
+    }
+    static clear() {
+        if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
+            fs.writeFileSync(DrawsHistoryStorageHandler.storage_path, JSON.stringify([]));
+        }
     }
     static saveDraws(data) {
         if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
@@ -19,6 +37,7 @@ export default class DrawsHistoryStorageHandler {
         else {
             fs.writeFileSync(DrawsHistoryStorageHandler.storage_path, JSON.stringify(data));
         }
+        DrawsHistoryStorageHandler.sort();
     }
     static getAllDraws() {
         let content = JSON.parse(fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString());
@@ -26,16 +45,6 @@ export default class DrawsHistoryStorageHandler {
     }
     static getLatestDraw() {
         let content = JSON.parse(fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString());
-        content = content.sort((first, second) => {
-            const a = new Date(first.drawTime);
-            const b = new Date(second.drawTime);
-            if (a.getTime() <= b.getTime()) {
-                return 1;
-            }
-            else {
-                return -1;
-            }
-        });
         return content[0];
     }
 }

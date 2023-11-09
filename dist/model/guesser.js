@@ -24,8 +24,10 @@ export default class GuesserModel {
             // Calculate odds for each number at the specified position
             const odds = {};
             Object.keys(outcomes[position]).forEach((number) => {
+                //@ts-ignore
                 const count = outcomes[position][number];
                 const probability = (count / totalGames) * 100; // Calculate probability in percentage
+                //@ts-ignore
                 odds[number] = Number(probability.toFixed(2)); // Round to 2 decimal places
             });
             outcomes[position] = odds;
@@ -51,7 +53,7 @@ export default class GuesserModel {
                 });
                 // Calculate the conditional probability
                 const conditionalProbability = (countBothNumbers / countFirstNumber) * 100;
-                outcomes[`${first}${second}`] = conditionalProbability.toFixed(2); // Round to 2 decimal places
+                outcomes[`${first}${second}`] = Number(conditionalProbability.toFixed(2)); // Round to 2 decimal places
             }
         }
         return outcomes;
