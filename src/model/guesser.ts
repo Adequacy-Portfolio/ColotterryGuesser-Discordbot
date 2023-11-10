@@ -20,6 +20,7 @@ export default class GuesserModel {
       keyof typeof outcomes
     >) {
       // Count occurrences of each number at the specified position
+      console.log(this._input);
       this._input.forEach((game) => {
         const number = game[
           Number(position) - 1

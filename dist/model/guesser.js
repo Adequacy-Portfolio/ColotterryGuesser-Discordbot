@@ -12,6 +12,7 @@ export default class GuesserModel {
         const totalGames = this._input.length;
         for (const position of Object.keys(outcomes)) {
             // Count occurrences of each number at the specified position
+            console.log(this._input);
             this._input.forEach((game) => {
                 const number = game[Number(position) - 1]; // Get number at the specified position (0, 1, or 2)
                 if (outcomes[position][number]) {

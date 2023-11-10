@@ -5,6 +5,7 @@ import ColotteryApiWrapper from "../../api/colottery.js";
 import DrawsHistoryStorageHandler from "../../storage/draws.js";
 
 import dotenv from "dotenv";
+import logger from "../../logger/log.js";
 dotenv.config();
 
 @Discord()
@@ -13,7 +14,13 @@ export class Checker {
     event: "ready",
   })
   async handler() {
-    // await DrawsHistoryStorageHandler.actualize();
+    try {
+      await DrawsHistoryStorageHandler.actualize();
+    } catch (err) {
+      logger.error(
+        `Unable to actualize the list database of draws. ${err} occurred.`,
+      );
+    }
 
     async function checkForNewDraw() {
       const mostRecentDraw = await ColotteryApiWrapper.getMostRecentDraw();
@@ -38,7 +45,7 @@ export class Checker {
 
     for (const check of dailyBiCheck) {
       check.start();
-      console.log(
+      logger.info(
         `A new job '${
           check.cronTime
         }' launched. Next run at [${check.nextDate()}].`,

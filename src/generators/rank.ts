@@ -1,6 +1,6 @@
 import { MathematicalConceptsN } from "../types/generator.js";
 
-export function rankPossibilities(
+export function rankPossibilitiesBySuccession(
   possibilities: MathematicalConceptsN.pattern[],
   history: MathematicalConceptsN.draw[],
 ) {
@@ -9,15 +9,18 @@ export function rankPossibilities(
   > = {};
 
   // Count the occurrences of each possibility in history
-  history.forEach((draw: any) => {
-    possibilities.forEach((possibility: any) => {
-      const possibilityString: MathematicalConceptsN.draw =
-        possibility.join("");
-      if (draw.includes(possibilityString)) {
-        possibilitiesCount[possibilityString] =
-          (possibilitiesCount[possibilityString] || 0) + 1;
-      }
-    });
+  history.forEach((draw, index) => {
+    if (draw === history.slice(-1)[0]) {
+      possibilities.forEach((possibility: MathematicalConceptsN.pattern) => {
+        const possibilityString = possibility.join(
+          "",
+        ) as MathematicalConceptsN.draw;
+        if (history[index + 1]?.includes(possibilityString)) {
+          possibilitiesCount[possibilityString] =
+            (possibilitiesCount[possibilityString] || 0) + 1;
+        }
+      });
+    }
   });
 
   // Sort possibilities based on their frequencies in descending order

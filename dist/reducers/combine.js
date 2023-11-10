@@ -1,7 +1,9 @@
 export function mergeAndRemoveDuplicates(first, second) {
-    const compound = [...first, ...second].map((draw) => JSON.stringify(draw));
-    const actualizedHistory = compound.filter((el, pos) => {
-        return compound.indexOf(el) === pos;
-    });
-    return actualizedHistory.map((draw) => JSON.parse(draw));
+    const compound = [...first, ...second];
+    return clearDuplicates(compound);
+}
+export function clearDuplicates(list) {
+    const stringified = list.map((el) => JSON.stringify(el));
+    const cleared = stringified.filter((el, pos) => stringified.indexOf(el) === pos);
+    return cleared.map((el) => JSON.parse(el));
 }

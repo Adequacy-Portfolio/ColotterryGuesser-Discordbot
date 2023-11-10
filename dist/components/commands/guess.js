@@ -10,9 +10,10 @@ import { byPositionReport, bySequenceReport, byPatternReport, last10DrawsReport,
 import DrawsHistoryStorageHandler from "../../storage/draws.js";
 import GuesserModel from "../../model/guesser.js";
 import { getOutcomes } from "../../adapters/outcomes.js";
-import { rankPossibilities } from "../../generators/rank.js";
+import { rankPatternsByRecurrence, rankPossibilitiesBySuccession, } from "../../generators/rank.js";
 import { generatePossibleDrawsFromPositions, generatePossibleDrawsFromSequences, generatePossibleDrawsFromPatterns, } from "../../generators/draws.js";
 import { byPatternReportDataForm, byPositionReportDataForm, bySequenceReportDataForm, } from "../../adapters/draws.js";
+import { clearDuplicates } from "../../reducers/combine.js";
 let Guess = class Guess {
     async handler(interaction) {
         await interaction.deferReply();
@@ -22,11 +23,17 @@ let Guess = class Guess {
             const occurenceByPosition = guesser.computeOccurenceByPosition();
             const occurenceBySequence = guesser.computeOccurenceBySequence();
             const occurenceByPattern = guesser.computeOccurenceByPattern();
-            const nominatedChoices = rankPossibilities([
+            const possiblities = [
                 ...generatePossibleDrawsFromPositions(byPositionReportDataForm(occurenceByPosition)),
                 ...generatePossibleDrawsFromSequences(bySequenceReportDataForm(occurenceBySequence)),
                 ...generatePossibleDrawsFromPatterns(byPatternReportDataForm(occurenceByPattern)),
-            ], getOutcomes(history).map((draw) => draw.join("")));
+            ];
+            const possibilitiesRankedByRecurrence = rankPatternsByRecurrence(possiblities);
+            const possiblitiesRankedBySuccession = rankPossibilitiesBySuccession(possiblities, getOutcomes(history).map((draw) => draw.join("")));
+            const nominatedChoices = clearDuplicates([
+                ...possiblitiesRankedBySuccession.slice(0, 3),
+                ...possibilitiesRankedByRecurrence.slice(0, 3),
+            ]);
             const byPositionReportData = byPositionReport(occurenceByPosition);
             const bySequenceReportData = bySequenceReport(occurenceBySequence);
             const byPatternReportData = byPatternReport(occurenceByPattern);

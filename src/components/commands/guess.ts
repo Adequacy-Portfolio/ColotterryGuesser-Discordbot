@@ -10,7 +10,10 @@ import {
 import DrawsHistoryStorageHandler from "../../storage/draws.js";
 import GuesserModel from "../../model/guesser.js";
 import { getOutcomes } from "../../adapters/outcomes.js";
-import { rankPossibilities } from "../../generators/rank.js";
+import {
+  rankPatternsByRecurrence,
+  rankPossibilitiesBySuccession,
+} from "../../generators/rank.js";
 import {
   generatePossibleDrawsFromPositions,
   generatePossibleDrawsFromSequences,
@@ -22,6 +25,8 @@ import {
   bySequenceReportDataForm,
 } from "../../adapters/draws.js";
 import { MathematicalConceptsN } from "../../types/generator.js";
+
+import { clearDuplicates } from "../../reducers/combine.js";
 
 @Discord()
 export class Guess {
@@ -39,22 +44,32 @@ export class Guess {
       const occurenceBySequence = guesser.computeOccurenceBySequence();
       const occurenceByPattern = guesser.computeOccurenceByPattern();
 
-      const nominatedChoices = rankPossibilities(
-        [
-          ...generatePossibleDrawsFromPositions(
-            byPositionReportDataForm(occurenceByPosition),
-          ),
-          ...generatePossibleDrawsFromSequences(
-            bySequenceReportDataForm(occurenceBySequence),
-          ),
-          ...generatePossibleDrawsFromPatterns(
-            byPatternReportDataForm(occurenceByPattern),
-          ),
-        ],
+      const possiblities = [
+        ...generatePossibleDrawsFromPositions(
+          byPositionReportDataForm(occurenceByPosition),
+        ),
+        ...generatePossibleDrawsFromSequences(
+          bySequenceReportDataForm(occurenceBySequence),
+        ),
+        ...generatePossibleDrawsFromPatterns(
+          byPatternReportDataForm(occurenceByPattern),
+        ),
+      ];
+
+      const possibilitiesRankedByRecurrence =
+        rankPatternsByRecurrence(possiblities);
+      const possiblitiesRankedBySuccession = rankPossibilitiesBySuccession(
+        possiblities,
         getOutcomes(history).map((draw) =>
           draw.join(""),
         ) as MathematicalConceptsN.draw[],
       );
+
+      const nominatedChoices = clearDuplicates([
+        ...possiblitiesRankedBySuccession.slice(0, 3),
+        ...possibilitiesRankedByRecurrence.slice(0, 3),
+      ]);
+
       const byPositionReportData = byPositionReport(occurenceByPosition);
       const bySequenceReportData = bySequenceReport(occurenceBySequence);
       const byPatternReportData = byPatternReport(occurenceByPattern);

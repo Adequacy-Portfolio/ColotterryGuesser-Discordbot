@@ -1,14 +1,15 @@
 import * as fs from "fs";
 import ColotteryApiWrapper from "../api/colottery.js";
 import { mergeAndRemoveDuplicates } from "../reducers/combine.js";
+import logger from "../logger/log.js";
 export default class DrawsHistoryStorageHandler {
     static storage_path = "./storage/draws.json";
     static async actualize() {
         const history = DrawsHistoryStorageHandler.getAllDraws();
         const draws = await ColotteryApiWrapper.getAllPastDraws();
-        DrawsHistoryStorageHandler.clear();
+        // DrawsHistoryStorageHandler.clear();
         DrawsHistoryStorageHandler.saveDraws(mergeAndRemoveDuplicates(history, draws));
-        DrawsHistoryStorageHandler.sort();
+        // DrawsHistoryStorageHandler.sort();
     }
     static sort() {
         if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
@@ -32,6 +33,7 @@ export default class DrawsHistoryStorageHandler {
     static saveDraws(data) {
         if (fs.existsSync(DrawsHistoryStorageHandler.storage_path)) {
             const content = JSON.parse(fs.readFileSync(DrawsHistoryStorageHandler.storage_path).toString());
+            logger.info("Merging newly detected draws with old ones.");
             fs.writeFileSync(DrawsHistoryStorageHandler.storage_path, JSON.stringify([...content, ...data]));
         }
         else {

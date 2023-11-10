@@ -1,0 +1,158 @@
+<11/10/2023, 4:29:43 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 4:29:47 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 4:29:50 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 4:29:51 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 4:29:53 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 4:29:54 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 4:29:55 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 4:29:55 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 4:29:56 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 4:29:57 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 4:29:58 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 4:29:59 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 4:30:00 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 4:30:01 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 4:30:02 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 4:30:03 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 4:30:04 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 4:30:05 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 4:30:06 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 4:30:07 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:30:07 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:39:03 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 4:39:06 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 4:39:09 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 4:39:10 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 4:39:11 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 4:39:12 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 4:39:13 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 4:39:14 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 4:39:15 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 4:39:16 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 4:39:17 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 4:39:18 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 4:39:18 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 4:39:19 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 4:39:20 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 4:39:21 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 4:39:22 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 4:39:23 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 4:39:24 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 4:39:25 AM> [LOG] INFO : Merging newly detected draws with old ones.
+<11/10/2023, 4:39:25 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:39:25 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:41:20 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 4:41:24 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 4:41:26 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 4:41:27 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 4:41:28 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 4:41:30 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 4:41:31 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 4:41:32 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 4:41:33 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 4:41:34 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 4:41:35 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 4:41:36 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 4:41:37 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 4:41:38 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 4:41:39 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 4:41:40 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 4:41:41 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 4:41:42 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 4:41:43 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 4:41:44 AM> [LOG] INFO : Merging newly detected draws with old ones.
+<11/10/2023, 4:41:44 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:41:44 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:45:46 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 4:45:49 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 4:45:52 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 4:45:53 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 4:45:54 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 4:45:55 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 4:45:56 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 4:45:57 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 4:45:58 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 4:46:00 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 4:46:01 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 4:46:02 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 4:46:04 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 4:46:04 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 4:46:08 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 4:46:09 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 4:46:10 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 4:46:11 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 4:46:12 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 4:46:13 AM> [LOG] INFO : Merging newly detected draws with old ones.
+<11/10/2023, 4:46:13 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:46:13 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:52:09 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 4:52:12 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 4:52:15 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 4:52:16 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 4:52:17 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 4:52:18 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 4:52:19 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 4:52:20 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 4:52:21 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 4:52:22 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 4:52:23 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 4:52:24 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 4:52:25 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 4:52:26 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 4:52:27 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 4:52:28 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 4:52:30 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 4:52:31 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 4:52:32 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 4:52:33 AM> [LOG] INFO : Merging newly detected draws with old ones.
+<11/10/2023, 4:52:33 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:52:33 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:56:13 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:56:13 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:57:31 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 4:57:31 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 5:00:41 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 5:00:43 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 5:00:46 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 5:00:48 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 5:00:49 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 5:00:49 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 5:00:50 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 5:00:51 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 5:00:52 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 5:00:53 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 5:00:54 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 5:00:55 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 5:00:56 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 5:00:57 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 5:00:58 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 5:00:59 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 5:01:00 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 5:01:01 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 5:01:02 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 5:01:03 AM> [LOG] INFO : Merging newly detected draws with old ones.
+<11/10/2023, 5:01:03 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 5:01:03 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 5:02:09 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/1/20
+<11/10/2023, 5:02:13 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/2/20
+<11/10/2023, 5:02:17 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/3/20
+<11/10/2023, 5:02:18 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/4/20
+<11/10/2023, 5:02:19 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/5/20
+<11/10/2023, 5:02:20 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/6/20
+<11/10/2023, 5:02:21 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/7/20
+<11/10/2023, 5:02:22 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/8/20
+<11/10/2023, 5:02:25 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/9/20
+<11/10/2023, 5:02:26 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/10/20
+<11/10/2023, 5:02:28 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/11/20
+<11/10/2023, 5:02:29 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/12/20
+<11/10/2023, 5:02:30 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/13/20
+<11/10/2023, 5:02:31 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/14/20
+<11/10/2023, 5:02:32 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/15/20
+<11/10/2023, 5:02:33 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/16/20
+<11/10/2023, 5:02:34 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/17/20
+<11/10/2023, 5:02:35 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/18/20
+<11/10/2023, 5:02:36 AM> [LOG] INFO : Grabbing data from https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/9/19/20
+<11/10/2023, 5:02:37 AM> [LOG] INFO : Merging newly detected draws with old ones.
+<11/10/2023, 5:02:37 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 5:02:37 AM> [LOG] INFO : A new job '0 0 8 * * *' launched. Next run at [2023-11-10T08:00:00.000-08:00].
+<11/10/2023, 5:05:24 AM> [LOG] INFO : Merging newly detected draws with old ones.

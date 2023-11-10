@@ -2,6 +2,7 @@ import * as fs from "fs";
 import fetchConfig from "./fetch.js";
 import { ColotteryN } from "../types/api.js";
 import DrawsHistoryStorageHandler from "../storage/draws.js";
+import logger from "../logger/log.js";
 
 export default class ColotteryApiWrapper {
   private static past_draw_endpoint =
@@ -38,7 +39,7 @@ export default class ColotteryApiWrapper {
       .replace("<page>", String(page))
       .replace("<result_size>", String(result_size));
 
-    console.log("Grabbing data from " + past_draw_endpoint);
+    logger.info(`Grabbing data from ${past_draw_endpoint}`);
 
     const response = await fetch(past_draw_endpoint, fetchConfig);
 

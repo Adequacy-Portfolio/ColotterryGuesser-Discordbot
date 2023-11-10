@@ -1,4 +1,5 @@
 import fetchConfig from "./fetch.js";
+import logger from "../logger/log.js";
 export default class ColotteryApiWrapper {
     static past_draw_endpoint = "https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/<game>/<page>/<result_size>";
     static games = {
@@ -22,7 +23,7 @@ export default class ColotteryApiWrapper {
             .replace("<game>", String(game))
             .replace("<page>", String(page))
             .replace("<result_size>", String(result_size));
-        console.log("Grabbing data from " + past_draw_endpoint);
+        logger.info(`Grabbing data from ${past_draw_endpoint}`);
         const response = await fetch(past_draw_endpoint, fetchConfig);
         return await response.json();
     }

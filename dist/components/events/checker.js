@@ -9,10 +9,16 @@ import { CronJob } from "cron";
 import ColotteryApiWrapper from "../../api/colottery.js";
 import DrawsHistoryStorageHandler from "../../storage/draws.js";
 import dotenv from "dotenv";
+import logger from "../../logger/log.js";
 dotenv.config();
 let Checker = class Checker {
     async handler() {
-        // await DrawsHistoryStorageHandler.actualize();
+        try {
+            await DrawsHistoryStorageHandler.actualize();
+        }
+        catch (err) {
+            logger.error(`Unable to actualize the list database of draws. ${err} occurred.`);
+        }
         async function checkForNewDraw() {
             const mostRecentDraw = await ColotteryApiWrapper.getMostRecentDraw();
             const mostRecentRegisteredDraw = DrawsHistoryStorageHandler.getLatestDraw();
@@ -30,7 +36,7 @@ let Checker = class Checker {
         });
         for (const check of dailyBiCheck) {
             check.start();
-            console.log(`A new job '${check.cronTime}' launched. Next run at [${check.nextDate()}].`);
+            logger.info(`A new job '${check.cronTime}' launched. Next run at [${check.nextDate()}].`);
         }
     }
 };
